@@ -31,7 +31,7 @@ layout medium-screen 'Superhuman' move ${fullscreen}
 layout medium-screen 'Notion' move ${fullscreen}
 layout medium-screen 'Reeder' move ${fullscreen}
 layout medium-screen 'Fantastical' move ${fullscreen}
-layout medium-screen 'Cron' move ${fullscreen}
+layout medium-screen 'Notion Calendar' move ${fullscreen}
 
 layout medium-screen 'Xcode' move ${fullscreen}
 layout medium-screen 'Terminal' move ${fullscreen}
@@ -48,49 +48,49 @@ bind 0:ctrl layout medium-screen
 # For 27/30" Screens
 ################################################################################
 
-# Make Bear skinny and place it on the left
-layout large-screen 'Bear' move screenSizeX*2/3;0 screenSizeX/3;screenSizeY
-layout large-screen 'Notion' move screenSizeX*2/3;0 screenSizeX/3;screenSizeY
+# Make Terminal skinny and place it on the right
+layout large-screen 'Terminal' move screenSizeX*2/3;0 screenSizeX/3;screenSizeY
 
-# Center Safari window in the middle of the screen
-layout large-screen 'Safari' move screenSizeX/2-newWindowSizeX/2;0 1600;screenSizeY
-layout large-screen 'Google Chrome' move screenSizeX/2-newWindowSizeX/2;0 1600;screenSizeY
+# Make Bear skinny and place it on the right
+layout large-screen 'Bear' move screenSizeX*2/3;0 screenSizeX/3;screenSizeY
+layout large-screen 'Granola' move screenSizeX*2/3;0 screenSizeX/3;screenSizeY
+
+# Make Claude reasonably sized and place it on the right
+layout large-screen 'Claude' move screenSizeX-newWindowSizeX;0 screenSizeY-newWindowSizeY;0 1500;1000
+
+# Place Safari window on the left of the screen
+layout large-screen 'Safari' move 0;0 1600;screenSizeY
+layout large-screen 'Google Chrome' move 0;0 1600;screenSizeY
+
+# Center Zoom
+layout large-screen 'Zoom' move screenSizeX/2-newWindowSizeX/2;screenSizeY/2-newWindowSizeY/2 1000;700
 
 # Make Slack a bit wider, center it
 layout large-screen 'Slack' move screenSizeX/2-newWindowSizeX/2;screenSizeY/2-newWindowSizeY/2 1200;900
 
 # Make Music slightly wider, center it
-layout large-screen 'Rdio' move screenSizeX/2-newWindowSizeX/2;screenSizeY/2-newWindowSizeY/2 1300;1000
+layout large-screen 'Sonos' move screenSizeX/2-newWindowSizeX/2;screenSizeY/2-newWindowSizeY/2 1300;1000
 layout large-screen 'iTunes' move screenSizeX/2-newWindowSizeX/2;screenSizeY/2-newWindowSizeY/2 1300;1000
 layout large-screen 'Spotify' move screenSizeX/2-newWindowSizeX/2;screenSizeY/2-newWindowSizeY/2 1300;1000
-layout large-screen 'Soundnode' move screenSizeX/2-newWindowSizeX/2;screenSizeY/2-newWindowSizeY/2 1300;1000
 
-# Make mail slightly wider than half a screen, center it
+# Make Mail slightly wider than half a screen, center it
 layout large-screen 'Mail' move screenSizeX/2-newWindowSizeX/2;screenSizeY/2-newWindowSizeY/2 1400;950
-layout large-screen 'Sparrow' move screenSizeX/2-newWindowSizeX/2;screenSizeY/2-newWindowSizeY/2 1400;950
-layout large-screen 'Airmail' move screenSizeX/2-newWindowSizeX/2;screenSizeY/2-newWindowSizeY/2 1400;950
-layout large-screen 'Mailbox (Beta)' move screenSizeX/2-newWindowSizeX/2;screenSizeY/2-newWindowSizeY/2 1400;950
 layout large-screen 'Superhuman' move screenSizeX/2-newWindowSizeX/2;screenSizeY/2-newWindowSizeY/2 1400;950
 
-# Make Reeder and Zeplin even wider, center it
-layout large-screen 'Reeder' move screenSizeX/2-newWindowSizeX/2;screenSizeY/2-newWindowSizeY/2 1600;1000
-layout large-screen 'Zeplin' move screenSizeX/2-newWindowSizeX/2;screenSizeY/2-newWindowSizeY/2 1600;1000
-
-# Make Fantastical 2 the widest, center it
+# Make Calendar apps the widest, center it
 layout large-screen 'Fantastical' move screenSizeX/2-newWindowSizeX/2;screenSizeY/2-newWindowSizeY/2 1700;1100
+layout large-screen 'Bambu Studio' move screenSizeX/2-newWindowSizeX/2;screenSizeY/2-newWindowSizeY/2 1700;1100
+layout large-screen 'Notion Calendar' move screenSizeX/2-newWindowSizeX/2;screenSizeY/2-newWindowSizeY/2 1700;1100
 
 # Make a few things fullscreen
 layout large-screen 'Xcode' move ${fullscreen}
-layout large-screen 'Terminal' move ${fullscreen}
 layout large-screen 'Alternote' move ${fullscreen}
 layout large-screen 'IntelliJ IDEA' move ${fullscreen}
 layout large-screen 'Android Studio' move ${fullscreen}
+layout large-screen 'Citrix Viewer' move ${fullscreen} 1
 
-# Move Clear to the top right corner of the screen
-layout large-screen 'Clear' move screenSizeX-newWindowSizeX;0 320;650
-
-# Move Messages to the bottom right corner of the screen
-layout large-screen 'Messages' move screenSizeX-newWindowSizeX;screenSizeY-newWindowSizeY 500;500
+# Move Messages to the bottom left corner of the screen
+layout large-screen 'Messages' move 0;screenSizeY-newWindowSizeY 500;500
 
 bind 9:ctrl layout large-screen
 
@@ -101,6 +101,13 @@ layout 2-up 'Terminal' move screenOriginX;screenOriginY screenSizeX/2;screenSize
 layout 2-up 'Safari' move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
 
 bind 2:ctrl layout 2-up
+
+# For Citrix on teleprompter
+################################################################################
+
+layout video-call 'Citrix Viewer' move screenOriginX;screenOriginY screenSizeX;screenSizeY 0
+
+bind 3:ctrl layout video-call
 
 # Fullscreen the current app
 ################################################################################
